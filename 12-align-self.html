@@ -1,0 +1,92 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fundamentos - align-self</title>
+    <style>
+      .flex-container {
+        max-width: 350px;
+        border: 1px solid;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+      }
+
+      .align-container {
+        align-items: center;
+      }
+
+      .item {
+        background-color: brown;
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        margin: 5px;
+      }
+
+      .center {
+        align-self: center;
+        /*center: relativo ao centro de acordo com o eixo*/
+      }
+
+      .start {
+        align-self: flex-start;
+        /*flex-start:ao início do container*/
+      }
+
+      .end {
+        align-self: flex-end;
+        /*flex-end: ao final do container*/
+      }
+
+      .baseline {
+        align-self: baseline;
+        /*baseline: utiliza a linha base da tipografia*/
+      }
+
+      .stretch {
+        align-self: stretch;
+        /*stretch: ocupa todo os espaço relativo*/
+      }
+
+      .auto {
+        align-self: auto;
+        /*auto: valor padrão, irá respeitar a definiçaõ de align-items do container*/
+      }
+    </style>
+  </head>
+  <body>
+    <h1>
+      Align-self é uma propriedade que estabelece o alinhamento de modo
+      individual sobre um determinado item.
+    </h1>
+
+    <section class="container align-container">
+      <div class="item auto">AAA</div>
+      <div class="item auto">123</div>
+      <div class="item auto">
+        Lorem Ipsum is therefore always free from repetition
+      </div>
+      <div class="item auto">ITEM 4</div>
+    </section>
+
+    <section class="container">
+      <div class="item center">AAA</div>
+      <div class="item start">123</div>
+      <div class="item stretch">
+        Lorem Ipsum is therefore always free from repetition
+      </div>
+      <div class="item end">ITEM 4</div>
+    </section>
+
+    <section class="container">
+      <div class="item center">AAA</div>
+      <div class="item start">123</div>
+      <div class="item stretch">
+        Lorem Ipsum is therefore always free from repetition
+      </div>
+      <div class="item end">ITEM 4</div>
+    </section>
+  </body>
+</html>
